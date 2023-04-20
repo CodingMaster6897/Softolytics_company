@@ -1,19 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Aladin&family=Alegreya+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aladin&family=Alegreya+Sans:wght@300&family=Rouge+Script&display=swap");
-.navbar {
-  margin-top: 2rem;
-  /* margin-left: 2rem; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  z-index: 999;
-  transition: all 0.3s ease-in-out;
-}
+
+
+
 .fancy-text {
   float: right;
   text-align: right;
@@ -33,76 +22,47 @@
   display: flex;
   justify-content: center;
 }
-.navbars {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end; /* align items to the bottom */
-  height: 100px;
-  text-transform: uppercase;
-  padding: 0 20px;
-}
 
-.navbars a {
-  display: block;
-  padding: 2px;
-  transform: rotate(-90deg);
-  transform-origin: top center;
-  position: relative;
-  left: 1px;
-  white-space: nowrap;
-  text-decoration: none;
-  margin-bottom: -0rem;
-  text-decoration: none;
-  font-family: "Alegreya";
-  color: rgb(0, 0, 0);
-}
 
-.navbars a:hover {
-  transition-duration: 0.5s;
-  transform: rotate(5deg);
-  border-bottom: none;
-}
 
 * {
   margin: 0;
   padding: 0;
 }
-.logo {
-  margin-left: 3rem;
-  max-width: 180px;
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
-}
 
-/* .scrolled .logo {
-  height: 40px;
-  transition: 1s;
-  max-width: 140px;
-  transform: rotate(-90deg);
-  margin-left: -25px;
-} */
+
 .Home {
   height: 100vh;
   width: 100vw;
   background-color: #f8f8f8;
 }
+
 .About {
   height: 100vh;
   width: 100vw;
   background-color: #f8f8f8;
 }
+
 .Contact {
   height: 100vh;
   width: 100vw;
   background-color: #f8f8f8;
 }
+
 .scroll-down {
   position: absolute;
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
+}
+
+.hero-slider-next-button {
+  display: none;
+}
+
+.hero-slider-previous-button {
+  display: none;
 }
 
 .scroll-down-arrow {
@@ -140,6 +100,8 @@
 }
 
 .scroll-down-arrow:hover img {
-  transform: scale(1.2); /* increase image size on hover */
-  padding: 3px; /* increase padding on hover */
+  transform: scale(1.2);
+  /* increase image size on hover */
+  padding: 3px;
+  /* increase padding on hover */
 }

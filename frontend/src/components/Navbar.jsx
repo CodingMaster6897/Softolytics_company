@@ -68,13 +68,16 @@ const Navbar = () => {
           </i>
         </div>
         <div className="items" id="items" style={{ textAlign: "center" }}>
-          <Link to="#main" onClick={(e) => smoothScroll(e, "#main")}>
+          <Link to="/">
             HOME
           </Link>
-          <Link to="#about" onClick={(e) => smoothScroll(e, "#about")}>
+          <Link to="/Aboutpage">
             ABOUT
           </Link>
-          <Link to="#ser" onClick={(e) => smoothScroll(e, "#ser")}>
+          <Link to="/carrers">
+            CARRERS
+          </Link>
+          <Link to="/Servicepage" onClick={(e) => smoothScroll(e, "#ser")}>
             SERVICES
           </Link>
           <Link to="/contact" style={{ listStyle: "none", color: "white" }}>

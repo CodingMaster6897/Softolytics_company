@@ -2,12 +2,13 @@ import React from "react";
 import service1 from "../assets/CRM.png";
 import service2 from "../assets/erp.png";
 import service3 from "../assets/App_development.png";
-import service4 from "../assets/service-icons/service4.png";
-import service5 from "../assets/service-icons/service5.png";
-import service6 from "../assets/service-icons/service6.png";
+import service4 from "../assets/pngegg.png";
+import service5 from "../assets/BPM.png";
+import service6 from "../assets/Buniness Analytics.png";
 import "./Services.css";
 import ScrollDownButton from "./ScrollDownButton";
 import { Link } from "react-router-dom";
+import { BiRightArrow } from "react-icons/bi";
 import scroll from "../assets/scroll-down.png";
 const Services = () => {
   const smoothScroll = (e, target) => {
@@ -22,32 +23,55 @@ const Services = () => {
   return (
     <>
       <div className="section services" id="ser">
-        <div className="container">
+        <div className="container" style={{ marginBottom: "4rem" }}>
           {/* <div className="small-header">What We Do</div> */}
           <div className="inner-container">
-            <div className="main-header">
+            <div className="main-headers">
               <h1 style={{ marginLeft: "5rem" }}>Our Services</h1>
             </div>
             <div className="services-outer">
               <div className="services-inner">
                 <div className="service-col">
                   <div className="service">
-                    <Link to="websites.aspx" className="service-data">
+                    <Link to="/erp" className="service-data">
                       <div className="service-img">
-                        <img src={service1} alt="Websites" />
+                        <img src={service2} alt="Websites" />
+                      </div>
+                      <div className="service-text">
+                        <div className="service-title">
+                          <h3>ERP Implementations</h3>
+                        </div>
+                        <p className="disc">
+                          We not only provide ERP software, but we do train our
+                          clients to get familiar with the ERP system.
+                        </p>
+                        <div class="service-btn">
+                          <p>Know More</p>
+                          {/* <span className="arrow"></span> */}
+                          <BiRightArrow className="arrow" />
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+                <div className="service-col">
+                  <div className="service">
+                    <Link to="/web" className="service-data">
+                      <div className="service-img">
+                        <img src={service4} alt="Graphic Design" />
                       </div>
                       <div className="service-text">
                         <div className="service-title">
                           <h3>Websites</h3>
                         </div>
                         <p className="disc">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quasi impedit voluptatibus perferendis ipsam
-                          nihil, hic quaerat harum quas distinctio beatae.
+                          Stunning website is just the beginning. We not only
+                          design & develop websites but we create a lively hood
+                          in them.
                         </p>
                         <div class="service-btn">
-                          <p>Read More</p>
-                          <span class="arrow"></span>
+                          <p>Know More</p>
+                          <BiRightArrow className="arrow" />
                         </div>
                       </div>
                     </Link>
@@ -55,22 +79,22 @@ const Services = () => {
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link to="graphic-design.aspx" className="service-data">
+                    <Link to="/crm" className="service-data">
                       <div className="service-img">
-                        <img src={service2} alt="Graphic Design" />
+                        <img src={service1} alt="Marketing" />
                       </div>
                       <div className="service-text">
                         <div className="service-title">
-                          <h3>Graphic Design</h3>
+                          <h3>CRM</h3>
                         </div>
                         <p className="disc">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quasi impedit voluptatibus perferendis ipsam
-                          nihil, hic quaerat harum quas distinctio beatae.
+                          Customer retention is every company’s dream. We
+                          provide CRM system to stay connected with customers,
+                          streamline processes, & improve profitability.
                         </p>
                         <div class="service-btn">
-                          <p>Read More</p>
-                          <span class="arrow"></span>
+                          <p>Know More</p>
+                          <BiRightArrow className="arrow" />
                         </div>
                       </div>
                     </Link>
@@ -78,22 +102,22 @@ const Services = () => {
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link to="marketing.aspx" className="service-data">
+                    <Link to="/data" className="service-data">
                       <div className="service-img">
-                        <img src={service3} alt="Marketing" />
+                        <img src={service6} alt="Mobile Apps" />
                       </div>
                       <div className="service-text">
                         <div className="service-title">
-                          <h3>Online Marketing</h3>
+                          <h3>Data Analytics & Reporting</h3>
                         </div>
                         <p className="disc">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quasi impedit voluptatibus perferendis ipsam
-                          nihil, hic quaerat harum quas distinctio beatae.
+                          Our certified professional helps individuals &
+                          organizations make sense of data and find hidden
+                          patterns, unseen trends, discover correlations……
                         </p>
                         <div class="service-btn">
-                          <p>Read More</p>
-                          <span class="arrow"></span>
+                          <p>Know More</p>
+                          <BiRightArrow className="arrow" />
                         </div>
                       </div>
                     </Link>
@@ -101,45 +125,22 @@ const Services = () => {
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link to="mobile-apps.aspx" className="service-data">
-                      <div className="service-img">
-                        <img src={service4} alt="Mobile Apps" />
-                      </div>
-                      <div className="service-text">
-                        <div className="service-title">
-                          <h3>Mobile Apps</h3>
-                        </div>
-                        <p className="disc">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quasi impedit voluptatibus perferendis ipsam
-                          nihil, hic quaerat harum quas distinctio beatae.
-                        </p>
-                        <div class="service-btn">
-                          <p>Read More</p>
-                          <span class="arrow"></span>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-                <div className="service-col">
-                  <div className="service">
-                    <Link to="social-media.aspx" className="service-data">
+                    <Link to="/bpm" className="service-data">
                       <div className="service-img">
                         <img src={service5} alt="Social Media" />
                       </div>
                       <div className="service-text">
                         <div className="service-title">
-                          <h3>Social Media</h3>
+                          <h3>Business Process Management</h3>
                         </div>
                         <p className="disc">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quasi impedit voluptatibus perferendis ipsam
-                          nihil, hic quaerat harum quas distinctio beatae.
+                          Our experienced team suggests various methods to
+                          discover, analyze, measure, model, improve, optimize,
+                          and automate business processes.
                         </p>
                         <div class="service-btn">
-                          <p>Read More</p>
-                          <span class="arrow"></span>
+                          <p>Know More</p>
+                          <BiRightArrow className="arrow" />
                         </div>
                       </div>
                     </Link>
@@ -147,25 +148,22 @@ const Services = () => {
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link
-                      to="e-commerce-solution.aspx"
-                      className="service-data"
-                    >
+                    <Link to="/mobile" className="service-data">
                       <div className="service-img">
-                        <img src={service6} alt="E-Commerce Solution" />
+                        <img src={service3} alt="E-Commerce Solution" />
                       </div>
                       <div className="service-text">
                         <div className="service-title">
-                          <h3>E-Commerce Solution</h3>
+                          <h3>App development</h3>
                         </div>
                         <p className="disc">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Quasi impedit voluptatibus perferendis ipsam
-                          nihil, hic quaerat harum quas distinctio beatae.
+                          Formulating stunning and best performing apps is our
+                          passion. Mobile strategy, design & development are our
+                          key expertise.
                         </p>
                         <div class="service-btn">
-                          <p>Read More</p>
-                          <span class="arrow"></span>
+                          <p>Know More</p>
+                          <BiRightArrow className="arrow" />
                         </div>
                       </div>
                     </Link>
@@ -175,15 +173,19 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="scroll-down">
-        <div className="scroll-down-arrow">
-          {/* <div className="scroll-down-text">Scroll Down</div> */}
-          <Link to="#about" onClick={(e) => smoothScroll(e, "#clients")}>
-            <div className="scroll-down-img-container">
-              <img className="scroll-down-img" src={scroll} alt="scroll down" />
-            </div>
-          </Link>
+        <div className="scroll-down">
+          <div className="scroll-down-arrow">
+            {/* <div className="scroll-down-text">Scroll Down</div> */}
+            <Link to="#about" onClick={(e) => smoothScroll(e, "#clients")}>
+              <div className="scroll-down-img-container">
+                <img
+                  className="scroll-down-img"
+                  src={scroll}
+                  alt="scroll down"
+                />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </>

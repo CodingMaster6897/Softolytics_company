@@ -19,39 +19,35 @@ const About = () => {
       <div className="section about" id="about">
         <div className="container">
           {/* <div className="small-header">Who We Are</div> */}
-          <div className="inner-container">
-            <div className="main-header">
-              <h1>About Us</h1>
+          <div className="inner-containers">
+            <div className="main-headers">
+              <h1>Know Us</h1>
             </div>
-            <p>
-              2 Tech Brothers is a full-service Web Design , Creative and
-              Marketing Agency offering results-driven services and exceptional
-              customer support.
+            <p className="paras">
+              Softolytics Private Limited is a software development division of
+              Siddhatva Brands with an enthusiastic team, catering software
+              solutions to an extensive range of industries and enterprises, and
+              an intelligent business solution. We are based in Pune, India, and
+              we provide a business solution in a global market. We are
+              specialized in developing business-grade applications and
+              customer-focused services to help our client's business to save
+              time, reduce redundancy in the process, make it economical, and
+              ultimately increase business efficiency.
             </p>
-            <p>
-              In today’ ultra competitive world it is absolutely imperative that
-              businesses irrespective of their size have web presence. Since our
-              professional and talented team has been helping clients large and
-              small in almost every sector establish and implement online
-              strategies that have resulted in digital success stories. We
-              understand very well that a website is an interface for business
-              and companies that want to strengthen their brand and grow their
-              profits come to us for modern design and marketing services.
-              Clients have used us to manage every element of their digital
-              presence.
+            <p className="paras">
+              Enterprise resource planning (ERP), business process management
+              (BPM), customer relationship management (CRM), data analytics &
+              reporting (Tableau, Power BI), web development, including
+              full-stack development, app development including cross platform
+              development, and IT solutions remain the featured specializations
+              of Softolytics.
             </p>
             <div className="fancy-text">
-              We are Friendly, Talented, Inspired & Result Oriented.
-            </div>
-            <div className="google-partners">
-              <div className="google">
-                <img src={google} alt="Google Partners" />
-              </div>
-              <div className="certification">Our Certifications</div>
+              We are Enthusiastic, Motivated, Friendly, Result & Technology
+              Oriented
             </div>
           </div>
         </div>
-        <div className="section-line"></div>
         <div className="scroll-down">
           <div className="scroll-down-arrow">
             {/* <div className="scroll-down-text">Scroll Down</div> */}

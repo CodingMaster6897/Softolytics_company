@@ -65,11 +65,13 @@
 
 .u-section-1 .u-text-1 {
   text-transform: uppercase;
+  font-family: "Aladin";
   font-weight: 700;
   margin: 20px 0 0;
 }
 
 .u-section-1 .u-text-2 {
+  font-family: "Algereya";
   margin: 19px 0 0;
 }
 
@@ -90,11 +92,13 @@
 
 .u-section-1 .u-text-3 {
   text-transform: uppercase;
+  font-family: "Aladin";
   font-weight: 700;
   margin: 20px 0 0;
 }
 
 .u-section-1 .u-text-4 {
+  font-family: "Algereya";
   margin: 19px 0 0;
 }
 
@@ -115,11 +119,13 @@
 
 .u-section-1 .u-text-5 {
   text-transform: uppercase;
+  font-family: "Aladin";
   font-weight: 700;
   margin: 20px 0 0;
 }
 
 .u-section-1 .u-text-6 {
+  font-family: "Algereya";
   margin: 19px 0 0;
 }
 
@@ -139,12 +145,14 @@
 }
 
 .u-section-1 .u-text-7 {
+  font-family: "Aladin";
   text-transform: uppercase;
   font-weight: 700;
   margin: 20px 0 0;
 }
 
 .u-section-1 .u-text-8 {
+  font-family: "Algereya";
   margin: 19px 0 0;
 }
 
@@ -179,6 +187,7 @@
 }
 
 .u-section-1 .u-label-3 {
+  font-family: "Algereya";
   font-weight: 700;
 }
 
@@ -201,19 +210,22 @@
 }
 
 .u-section-1 .u-text-9 {
+  font-family: "Aladin";
   font-size: 3rem;
   margin: 0 auto 0 0;
 }
 
 .u-section-1 .u-text-10 {
-  font-weight: 700;
-  line-height: 1.8;
-  font-style: italic;
-  font-size: 1.125rem;
+  /* font-weight: 700; */
+  line-height: 2;
+  /* font-style: italic; */
+
+  font-size: 1rem;
   margin: 20px 0 0;
 }
 
 .u-section-1 .u-text-11 {
+  font-family: "Algereya";
   line-height: 2;
   font-size: 1rem;
   margin: 20px 0 0;

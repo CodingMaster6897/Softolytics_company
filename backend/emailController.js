@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 
+
 const sendMail = async (req, res) => {
   //   console.log(req.body);
   const transporter = nodemailer.createTransport({
@@ -27,4 +28,5 @@ const sendMail = async (req, res) => {
   });
   return res.status(200).json({ message: " Message sent successfully" });
 };
-module.exports = sendMail;
+const sendResume = async (req, res) => {};
+module.exports = { sendMail, sendResume };

@@ -1,31 +1,26 @@
 import React from "react";
-import img1 from "../assets/client-logos/hiranandani.jpg";
-import img2 from "../assets/client-logos/vodafone.jpg";
-import img3 from "../assets/client-logos/cadd.jpg";
-import img4 from "../assets/client-logos/hdfc-realty.jpg";
-import img5 from "../assets/client-logos/sbi-card.jpg";
-import img6 from "../assets/client-logos/deepali-designs.jpg";
-import img7 from "../assets/client-logos/gangar-eyenation.jpg";
-import img8 from "../assets/client-logos/kyc.jpg";
-import img9 from "../assets/client-logos/idea.jpg";
-import img10 from "../assets/client-logos/vacs.jpg";
-import img11 from "../assets/client-logos/ajmera.jpg";
-import img12 from "../assets/client-logos/arkade.jpg";
-import img13 from "../assets/client-logos/citi-bank.jpg";
-import img14 from "../assets/client-logos/nmims.jpg";
-import img15 from "../assets/client-logos/upaca.jpg";
-import img16 from "../assets/client-logos/western-union-money-transfer.jpg";
-import img17 from "../assets/client-logos/vegsutra.jpg";
-import img18 from "../assets/client-logos/kenia.jpg";
-import img19 from "../assets/client-logos/nritya-shakti.jpg";
-import img20 from "../assets/client-logos/nritya-shakti.jpg";
-import img21 from "../assets/client-logos/db-realty.jpg";
-import img22 from "../assets/client-logos/met.jpg";
-import img23 from "../assets/client-logos/dream-cruises.jpg";
-import img24 from "../assets/client-logos/rivali-park.jpg";
+import img1 from "../assets/clients/DCPL.png";
+import img2 from "../assets/clients/dth.png";
+import img3 from "../assets/clients/kalaya_tower.png";
+import img4 from "../assets/clients/OFCTS_Siddhatva.png";
+import img5 from "../assets/clients/Orbit_Source_Final.png";
+import img6 from "../assets/clients/Ray.png";
+import img7 from "../assets/clients/mytaxfiling.png";
+import img8 from "../assets/clients/akruti.png";
 import "./Clients.css";
+import scroll from "../assets/scroll-up.png";
+import { Link } from "react-router-dom";
 
 const Clients = () => {
+  const smoothScroll = (e, target) => {
+    e.preventDefault();
+    const element = document.querySelector(target);
+    const topOffset = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: topOffset,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div class="section clients" id="clients">
@@ -59,61 +54,27 @@ const Clients = () => {
                   <img src={img6} alt="Deepali Designs" />
                 </div>
                 <div class="logo-col">
-                  <img src={img7} alt="Gangar Eyenation" />
+                  <img src={img7} alt="Deepali Designs" />
                 </div>
                 <div class="logo-col">
-                  <img src={img8} alt="KYC Events" />
-                </div>
-                <div class="logo-col">
-                  <img src={img9} alt="Idea" />
-                </div>
-                <div class="logo-col">
-                  <img src={img10} alt="VACS" />
-                </div>
-                <div class="logo-col">
-                  <img src={img11} alt="Ajmera" />
-                </div>
-                <div class="logo-col">
-                  <img src={img12} alt="Arkade" />
-                </div>
-                <div class="logo-col">
-                  <img src={img13} alt="Citi Bank" />
-                </div>
-                <div class="logo-col">
-                  <img src={img14} alt="NMIMS" />
-                </div>
-                <div class="logo-col">
-                  <img src={img15} alt="UPACA" />
-                </div>
-                <div class="logo-col">
-                  <img src={img16} alt="Western Union Money Transfer" />
-                </div>
-                <div class="logo-col">
-                  <img src={img17} alt="Vegsutra" />
-                </div>
-                <div class="logo-col">
-                  <img src={img18} alt="Kenia" />
-                </div>
-                <div class="logo-col">
-                  <img src={img19} alt="Nritya Shakti" />
-                </div>
-                <div class="logo-col">
-                  <img src={img20} alt="DB Realty" />
-                </div>
-                <div class="logo-col">
-                  <img src={img21} alt="MET" />
-                </div>
-                <div class="logo-col">
-                  <img src={img22} alt="Dream Cruises" />
-                </div>
-                <div class="logo-col">
-                  <img src={img23} alt="Rivali Park" />
-                </div>
-                <div class="logo-col">
-                  <img src={img24} alt="Lithan" />
+                  <img src={img8} alt="Deepali Designs" />
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="scroll-down">
+          <div className="scroll-down-arrow">
+            {/* <div className="scroll-down-text">Scroll Down</div> */}
+            <Link to="#about" onClick={(e) => smoothScroll(e, "#main")}>
+              <div className="scroll-down-img-container">
+                <img
+                  className="scroll-down-img"
+                  src={scroll}
+                  alt="scroll down"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

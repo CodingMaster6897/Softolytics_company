@@ -1,5 +1,5 @@
 #clients {
-  background: #f8f8f8;
+  background: #eceaeb;
 }
 
 .client-logos {
@@ -14,7 +14,8 @@
 }
 
 .logo-col {
-  width: 16.665%;
+  /* width: 33%; */
+  /* width: 16.665%; */
   float: left;
   background: #fff;
   -webkit-filter: grayscale(100%);
@@ -32,6 +33,7 @@
   width: 70%;
   margin: 15%;
 }
+
 @media (max-width: 1200px) {
   .client-logos-inner {
     justify-content: center;
@@ -49,6 +51,7 @@
   .client-logos-inner {
     padding: 0 10px;
   }
+
   .logo-col {
     width: 33%;
   }

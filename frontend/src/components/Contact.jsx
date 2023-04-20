@@ -7,6 +7,8 @@ import Lottie from "react-lottie";
 import Swal from "sweetalert2";
 import "./Contact.css";
 import "./Contact1.css";
+import GoogleMapReact from "google-map-react";
+
 import { SiEightsleep } from "react-icons/si";
 const defaultOptions = {
   loop: true,
@@ -95,6 +97,7 @@ const Contact = () => {
       setname("");
     });
   };
+
   return (
     <>
       <div className="u-body u-xl-mode" data-lang="en">
@@ -107,7 +110,10 @@ const Contact = () => {
                   <span className="u-custom-item u-icon u-text-palette-1-base u-icon-1">
                     <Lottie options={defaultOptions} height={100} width={80} />
                   </span>
-                  <h5 className="u-text u-text-1" style={{ marginTop: "2rem" }}>
+                  <h5
+                    className="u-text u-text-1 "
+                    style={{ marginTop: "2rem" }}
+                  >
                     Visit Us
                   </h5>
                   <p className="u-text u-text-2">
@@ -119,10 +125,7 @@ const Contact = () => {
               <div className="u-align-center u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-2">
                 <div className="u-container-layout u-similar-container u-valign-top u-container-layout-2">
                   <span className="u-custom-item u-file-icon u-icon u-text-palette-1-base u-icon-2">
-                    <a
-                      href="https://www.instagram.com/xassh__/"
-                      target="_blank"
-                    >
+                    <a href="https://www.instagram.com/xassh__" target="_blank">
                       <Lottie
                         options={defaultOptions1}
                         height={100}
@@ -144,7 +147,12 @@ const Contact = () => {
                 <div className="u-container-layout u-similar-container u-valign-top u-container-layout-3">
                   <span className="u-custom-item u-file-icon u-icon u-text-palette-1-base u-icon-3">
                     {/* <img src="images/953831-4f3e4538.png" alt="" /> */}
-                    <Lottie options={defaultOptions2} height={100} width={80} />
+                    <Lottie
+                      options={defaultOptions2}
+                      height={100}
+                      width={80}
+                      style={{ marginLeft: "-10px" }}
+                    />
                   </span>
                   <h5 className="u-text u-text-5" style={{ marginTop: "2rem" }}>
                     Fax
@@ -156,7 +164,12 @@ const Contact = () => {
                 <div className="u-container-layout u-similar-container u-valign-top u-container-layout-4">
                   <span className="u-custom-item u-file-icon u-icon u-text-palette-1-base u-icon-4">
                     {/* <img src="images/561127-14c331f2.png" alt="" /> */}{" "}
-                    <Lottie options={defaultOptions3} height={100} width={80} />
+                    <Lottie
+                      options={defaultOptions3}
+                      height={100}
+                      width={80}
+                      style={{ marginLeft: "-10px" }}
+                    />
                   </span>
                   <h5 className="u-text u-text-7" style={{ marginTop: "2rem" }}>
                     Email
@@ -185,12 +198,12 @@ const Contact = () => {
                         style={{ padding: "10px" }}
                       >
                         <div className="u-form-group u-form-message">
-                          <label
+                          {/* <label
                             for="message-319a"
                             className="u-label u-text-body-alt-color u-label-3"
                           >
                             Full name
-                          </label>
+                          </label> */}
                           <input
                             placeholder="Enter your Full name"
                             rows="4"
@@ -199,21 +212,23 @@ const Contact = () => {
                             name="message"
                             className="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle "
                             required=""
+                            style={{ fontFamily: "Alegerya" }}
                             onChange={(e) => setname(e.target.value)}
                             spellcheck="false"
                           />
                         </div>
                         <div className="u-form-group u-form-message">
-                          <label
+                          {/* <label
                             for="message-319a"
                             className="u-label u-text-body-alt-color u-label-3"
                           >
                             *Email
-                          </label>
+                          </label> */}
                           <input
                             placeholder="Enter your email"
                             rows="4"
                             cols="50"
+                            style={{ fontFamily: "Alegerya" }}
                             id="message-319a"
                             name="message"
                             className={`u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle ${
@@ -235,16 +250,17 @@ const Contact = () => {
                           </div>
                         </div>
                         <div className="u-form-group u-form-message">
-                          <label
+                          {/* <label
                             for="message-319a"
                             className="u-label u-text-body-alt-color u-label-3"
                           >
                             *Phone
-                          </label>
+                          </label> */}
                           <input
                             placeholder="Enter your Phone"
                             rows="4"
                             cols="50"
+                            style={{ fontFamily: "Alegerya" }}
                             id="message-319a"
                             name="message"
                             className={`u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle ${
@@ -266,16 +282,17 @@ const Contact = () => {
                           </div>
                         </div>
                         <div className="u-form-group u-form-message">
-                          <label
+                          {/* <label
                             for="message-319a"
                             className="u-label u-text-body-alt-color u-label-3"
                           >
                             Message
-                          </label>
+                          </label> */}
                           <textarea
                             placeholder="Enter your message"
                             rows="4"
                             cols="50"
+                            style={{ fontFamily: "Alegerya" }}
                             id="message-319a"
                             name="message"
                             className="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle "
@@ -291,6 +308,7 @@ const Contact = () => {
                             href="#"
                             className="u-btn u-btn-round u-btn-submit u-button-style u-radius-50 u-text-palette-1-base u-white u-btn-2"
                             onClick={handleSubmit}
+                            style={{ fontFamily: "Algereya" }}
                           >
                             Submit
                           </button>
@@ -304,10 +322,10 @@ const Contact = () => {
                     <h2 className="u-text u-text-body-alt-color u-text-default u-text-9">
                       Get in touch
                     </h2>
-                    <h6 className="u-custom-font u-text u-text-body-alt-color u-text-font u-text-10">
+                    <p className=" u-text u-text-body-alt-color u-text-font u-text-11">
                       We can ensure reliability, low cost fares and most
                       important, with safety and comfort in mind.
-                    </h6>
+                    </p>
                     <p className="u-text u-text-body-alt-color u-text-11">
                       Etiam sit amet convallis erat – className aptent taciti
                       sociosqu ad litora torquent per conubia! Maecenas gravida
@@ -319,6 +337,17 @@ const Contact = () => {
             </div>
           </div>
         </section>
+      </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.279946400804!2d73.94229017514651!3d18.561413582540098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c37942ddc8d9%3A0x5617a3bcbfc7565f!2sCity%20Vista%2C%20Kharadi!5e0!3m2!1sen!2sin!4v1681998786040!5m2!1sen!2sin"
+          width="100%"
+          height="500"
+          style={{ border: "0" }}
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </>
   );
