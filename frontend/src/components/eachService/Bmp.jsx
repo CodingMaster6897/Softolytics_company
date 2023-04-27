@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import img1 from "../../assets/web-design-page/1.png";
@@ -28,6 +28,9 @@ const Bmp = () => {
       behavior: "smooth",
     });
   };
+  useEffect(() => {
+    document.title = "SPL | BPM";
+  }, []);
   return (
     <div>
       <div className="data-main">
@@ -61,7 +64,7 @@ const Bmp = () => {
             </div>
           </div>
         </div>
-        <div className="section inner-service" id="web-design">
+        <div className="section inner-service" id="web-design" >
           <div className="container">
             <div className="small-header">STUNNING WEBSITE DESIGN</div>
             <div className="inner-container">

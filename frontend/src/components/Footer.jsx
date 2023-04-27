@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import { a } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,41 +13,41 @@ const Footer = () => {
           <div className="service-links">
             <div className="service-links-inner">
               <div className="service-link-col">
-                <a href="websites.aspx">ERP</a>
+                <a href="/erp">ERP</a>
               </div>
               <div className="service-link-col">
-                <a href="graphic-design.aspx">Websites</a>
+                <a href="/web">Websites</a>
               </div>
               <div className="service-link-col">
-                <a href="mobile-apps.aspx">Data analytics</a>
+                <a href="/data">Data analytics</a>
               </div>
               <div className="service-link-col">
-                <a href="marketing.aspx">Buisness Process Management</a>
+                <a href="/bpm">Buisness Process Management</a>
               </div>
               <div className="service-link-col">
-                <a href="social-media.aspx">App Development</a>
+                <a href="/mobile">App Development</a>
               </div>
               <div className="service-link-col">
-                <a href="e-commerce-solution.aspx">CRM</a>
+                <a href="/crm">CRM</a>
               </div>
             </div>
           </div>
           <div className="page-links">
             <div className="page-links-inner">
               <div className="page-link-col">
-                <Link to="/">Home</Link>
+                <a href="/">Home</a>
               </div>
               <div className="page-link-col">
-                <Link to="/Aboutpage">About</Link>
+                <a href="/Aboutpage">About</a>
               </div>
               <div className="page-link-col">
-                <Link to="/carrers">Carrers</Link>
+                <a href="/carrers">Carrers</a>
               </div>
               <div className="page-link-col">
-                <Link to="/service">Services</Link>
+                <a href="/Servicepage">Services</a>
               </div>
               <div className="page-link-col">
-                <Link to="/contact">Contact</Link>
+                <a href="/contact">Contact</a>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import img1 from "../../assets/web-design-page/1.png";
@@ -28,12 +28,19 @@ const Mobile = () => {
       behavior: "smooth",
     });
   };
+  useEffect(() => {
+    document.title = "SPL | App Development";
+  }, []);
   return (
     <div>
       <div className="data-main">
         <Navbar />
-        <div class="section small-banner" id="small-banner">
-          <div class="banner-title">Customer Relationship Management (CRM)</div>
+        <div
+          class="section small-banner"
+          id="small-banner"
+          style={{ backgroundColor: "#eceaeb" }}
+        >
+          <div class="banner-title">Business Process Management (BPM)</div>
 
           <div class="banner-subtitle">
             <span>Responsive&nbsp;Websites</span>
@@ -57,7 +64,7 @@ const Mobile = () => {
             </div>
           </div>
         </div>
-        <div className="section inner-service" id="web-design">
+        <div className="section inner-service" id="web-design" >
           <div className="container">
             <div className="small-header">STUNNING WEBSITE DESIGN</div>
             <div className="inner-container">
@@ -110,7 +117,11 @@ const Mobile = () => {
             </div>
           </div>
         </div>
-        <div className="section inner-service" id="web-development">
+        <div
+          className="section inner-service"
+          id="web-development"
+          style={{ backgroundColor: "#eceaeb" }}
+        >
           <div className="container">
             <div className="small-header">Crafting Customised Applications</div>
             <div className="inner-container">
@@ -188,26 +199,26 @@ const Mobile = () => {
                 </div>
               </div>
             </div>
-            <div className="scroll-down">
-              <div className="scroll-down-arrow">
-                {/* <div className="scroll-down-text">Scroll Down</div> */}
-                <Link
-                  to="#about"
-                  onClick={(e) => smoothScroll(e, "#web-maintenance")}
-                >
-                  <div className="scroll-down-img-container">
-                    <img
-                      className="scroll-down-img"
-                      src={scroll}
-                      alt="scroll down"
-                    />
-                  </div>
-                </Link>
-              </div>
+          </div>
+          <div className="scroll-down">
+            <div className="scroll-down-arrow">
+              {/* <div className="scroll-down-text">Scroll Down</div> */}
+              <Link
+                to="#about"
+                onClick={(e) => smoothScroll(e, "#web-maintenance")}
+              >
+                <div className="scroll-down-img-container">
+                  <img
+                    className="scroll-down-img"
+                    src={scroll}
+                    alt="scroll down"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="section inner-service" id="web-maintenance">
+        <div className="section inner-service" id="web-maintenance" style={{ backgroundColor: "#eceaeb" }}>
           <div className="container">
             <div className="small-header">Maintenance And Support</div>
             <div className="inner-container">
@@ -233,22 +244,22 @@ const Mobile = () => {
                 </div>
               </div>
             </div>
-            <div className="scroll-down">
-              <div className="scroll-down-arrow">
-                {/* <div className="scroll-down-text">Scroll Down</div> */}
-                <Link
-                  to="#about"
-                  onClick={(e) => smoothScrollup(e, "#small-banner")}
-                >
-                  <div className="scroll-down-img-container">
-                    <img
-                      className="scroll-down-img"
-                      src={scrollup}
-                      alt="scroll down"
-                    />
-                  </div>
-                </Link>
-              </div>
+          </div>
+          <div className="scroll-down">
+            <div className="scroll-down-arrow">
+              {/* <div className="scroll-down-text">Scroll Down</div> */}
+              <Link
+                to="#about"
+                onClick={(e) => smoothScrollup(e, "#small-banner")}
+              >
+                <div className="scroll-down-img-container">
+                  <img
+                    className="scroll-down-img"
+                    src={scrollup}
+                    alt="scroll down"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
         </div>

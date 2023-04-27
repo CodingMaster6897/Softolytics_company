@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../assets/animation/4901-location-finding.json";
 import img2 from "../assets/animation/83988-phone.json";
 import img3 from "../assets/animation/53161-ringing-red-stationary-phone-with-button-keypad-vector-illustration.json";
@@ -44,6 +44,9 @@ const defaultOptions3 = {
 };
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "SPL | Contact-us";
+  }, []);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);

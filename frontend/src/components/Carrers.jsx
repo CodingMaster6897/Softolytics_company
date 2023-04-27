@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./eachService/OneService.css";
 import "./carrers.css";
 import { Form, Link } from "react-router-dom";
@@ -8,13 +8,25 @@ import img2 from "../assets/web-design-page/2.png";
 import img3 from "../assets/web-design-page/3.png";
 import img4 from "../assets/web-design-page/4.png";
 import Dropdown from "./Dropdown";
+import scrollup from "../assets/scroll-up.png";
 import scroll from "../assets/scroll-down.png";
+import { openings } from "../assets/job/openings";
+import "./Dropdown.css";
 
 const Carrers = () => {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [option, setoption] = useState("");
   const [resume, setresume] = useState();
+  const [clicked, setClicked] = useState(null);
+
+  const handleToggle = (index) => {
+    if (clicked === index) {
+      setClicked(null);
+    } else {
+      setClicked(index);
+    }
+  };
   const handleSubmit = () => {
     const formData = new FormData();
     formData.append("file", resume);
@@ -28,6 +40,19 @@ const Carrers = () => {
       behavior: "smooth",
     });
   };
+  const smoothScrollup = (e, target) => {
+    e.preventDefault();
+    const element = document.querySelector(target);
+    const topOffset = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: topOffset,
+      behavior: "smooth",
+    });
+  };
+  useEffect(() => {
+    document.title = "SPL | Carrers";
+  }, []);
+
   return (
     <div>
       <div className="data-main">
@@ -43,6 +68,20 @@ const Carrers = () => {
             <input type="text" placeholder="Search by Location" />
             <button class="search-btn">Search</button>
           </div> */}
+          <div className="scroll-down">
+            <div className="scroll-down-arrow">
+              {/* <div className="scroll-down-text">Scroll Down</div> */}
+              <Link to="#about" onClick={(e) => smoothScroll(e, "#web-design")}>
+                <div className="scroll-down-img-container">
+                  <img
+                    className="scroll-down-img"
+                    src={scroll}
+                    alt="scroll down"
+                  />
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="section inner-service" id="web-design">
           <div className="container">
@@ -153,7 +192,68 @@ const Carrers = () => {
           </div>
         </div>
       </div>
-      <Dropdown />
+      <div>
+        <div
+          className="section inner-service"
+          style={{ backgroundColor: "#eceaeb" }}
+          id="openings"
+        >
+          <div className="container" style={{ marginTop: "-2rem" }}>
+            <h1
+              style={{
+                marginBottom: "3rem",
+                marginRight: "57rem",
+                color: "#15ada1",
+                fontFamily: "Aladin",
+              }}
+            >
+              Current Job Openings
+            </h1>
+            <div className="boxaccordion">
+              <div className="containerwidth">
+                {openings.map((opening, index) => (
+                  <div className="wrapper" key={index}>
+                    <button
+                      className="toggles"
+                      onClick={() => handleToggle(index)}
+                    >
+                      {opening.title}
+                      {clicked === index ? (
+                        <i className="fas fa-minus icon"></i>
+                      ) : (
+                        <i className="fas fa-plus icon"></i>
+                      )}
+                    </button>
+                    <div
+                      className={`content ${clicked === index ? "show" : ""}`}
+                    >
+                      <hr />
+                      <div className="text">
+                        Experience: {opening.Experience}
+                      </div>
+                      <br />
+                      <div className="text">Location: {opening.Location}</div>
+                      <br />
+                      <div className="text">
+                        Education Qualifications:{" "}
+                        {opening["Education Qualification"]}
+                      </div>
+                      <br />
+                      Required Skills:
+                      <ul>
+                        {opening["Required Skills"].map((skill, index) => (
+                          <li key={index}>{skill}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <Dropdown /> */}
     </div>
   );
 };

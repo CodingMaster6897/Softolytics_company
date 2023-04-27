@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { openings } from "../assets/job/openings";
 import "./Dropdown.css";
+import scrollup from "../assets/scroll-up.png";
+import { Link } from "react-router-dom";
 
 const Dropdown = () => {
   const [clicked, setClicked] = useState(null);
@@ -11,6 +13,15 @@ const Dropdown = () => {
     } else {
       setClicked(index);
     }
+  };
+  const smoothScrollup = (e, target) => {
+    e.preventDefault();
+    const element = document.querySelector(target);
+    const topOffset = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: topOffset,
+      behavior: "smooth",
+    });
   };
   return (
     <div>
@@ -69,6 +80,7 @@ const Dropdown = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

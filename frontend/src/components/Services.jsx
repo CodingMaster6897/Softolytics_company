@@ -7,7 +7,6 @@ import service5 from "../assets/BPM.png";
 import service6 from "../assets/Buniness Analytics.png";
 import "./Services.css";
 import ScrollDownButton from "./ScrollDownButton";
-import { Link } from "react-router-dom";
 import { BiRightArrow } from "react-icons/bi";
 import scroll from "../assets/scroll-down.png";
 const Services = () => {
@@ -33,7 +32,7 @@ const Services = () => {
               <div className="services-inner">
                 <div className="service-col">
                   <div className="service">
-                    <Link to="/erp" className="service-data">
+                    <a href="/erp" className="service-data">
                       <div className="service-img">
                         <img src={service2} alt="Websites" />
                       </div>
@@ -51,12 +50,12 @@ const Services = () => {
                           <BiRightArrow className="arrow" />
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link to="/web" className="service-data">
+                    <a href="/web" className="service-data">
                       <div className="service-img">
                         <img src={service4} alt="Graphic Design" />
                       </div>
@@ -74,12 +73,12 @@ const Services = () => {
                           <BiRightArrow className="arrow" />
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link to="/crm" className="service-data">
+                    <a href="/crm" className="service-data">
                       <div className="service-img">
                         <img src={service1} alt="Marketing" />
                       </div>
@@ -97,12 +96,12 @@ const Services = () => {
                           <BiRightArrow className="arrow" />
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link to="/data" className="service-data">
+                    <a href="/data" className="service-data">
                       <div className="service-img">
                         <img src={service6} alt="Mobile Apps" />
                       </div>
@@ -120,12 +119,12 @@ const Services = () => {
                           <BiRightArrow className="arrow" />
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link to="/bpm" className="service-data">
+                    <a href="/bpm" className="service-data">
                       <div className="service-img">
                         <img src={service5} alt="Social Media" />
                       </div>
@@ -143,12 +142,12 @@ const Services = () => {
                           <BiRightArrow className="arrow" />
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="service-col">
                   <div className="service">
-                    <Link to="/mobile" className="service-data">
+                    <a href="/mobile" className="service-data">
                       <div className="service-img">
                         <img src={service3} alt="E-Commerce Solution" />
                       </div>
@@ -166,7 +165,7 @@ const Services = () => {
                           <BiRightArrow className="arrow" />
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -176,7 +175,7 @@ const Services = () => {
         <div className="scroll-down">
           <div className="scroll-down-arrow">
             {/* <div className="scroll-down-text">Scroll Down</div> */}
-            <Link to="#about" onClick={(e) => smoothScroll(e, "#clients")}>
+            <a href="#about" onClick={(e) => smoothScroll(e, "#clients")}>
               <div className="scroll-down-img-container">
                 <img
                   className="scroll-down-img"
@@ -184,7 +183,7 @@ const Services = () => {
                   alt="scroll down"
                 />
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

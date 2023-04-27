@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Services from "./Services";
 import Navbar from "./Navbar";
 import service1 from "../assets/CRM.png";
@@ -9,7 +9,7 @@ import service5 from "../assets/BPM.png";
 import service6 from "../assets/Buniness Analytics.png";
 import "./Services.css";
 import ScrollDownButton from "./ScrollDownButton";
-import { Link } from "react-router-dom";
+import { a } from "react-router-dom";
 import { BiRightArrow } from "react-icons/bi";
 import scroll from "../assets/scroll-down.png";
 import scrollup from "../assets/scroll-up.png";
@@ -33,6 +33,9 @@ const ServicePage = () => {
       behavior: "smooth",
     });
   };
+  useEffect(() => {
+    document.title = "SPL | Services";
+  }, []);
   return (
     <div>
       <div className="data-main">
@@ -54,7 +57,7 @@ const ServicePage = () => {
           <div className="scroll-down">
             <div className="scroll-down-arrow">
               {/* <div className="scroll-down-text">Scroll Down</div> */}
-              <Link to="#ser" onClick={(e) => smoothScroll(e, "#ser")}>
+              <a href="#ser" onClick={(e) => smoothScroll(e, "#ser")}>
                 <div className="scroll-down-img-container">
                   <img
                     className="scroll-down-img"
@@ -62,7 +65,7 @@ const ServicePage = () => {
                     alt="scroll down"
                   />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -77,7 +80,7 @@ const ServicePage = () => {
                 <div className="services-inner">
                   <div className="service-col">
                     <div className="service">
-                      <Link to="/erp" className="service-data">
+                      <a href="/erp" className="service-data">
                         <div className="service-img">
                           <img src={service2} alt="Websites" />
                         </div>
@@ -87,7 +90,7 @@ const ServicePage = () => {
                           </div>
                           <p className="disc">
                             We not only provide ERP software, but we do train
-                            our clients to get familiar with the ERP system.
+                            our clients href get familiar with the ERP system.
                           </p>
                           <div class="service-btn">
                             <p>Know More</p>
@@ -95,12 +98,12 @@ const ServicePage = () => {
                             <BiRightArrow className="arrow" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div className="service-col">
                     <div className="service">
-                      <Link to="/web" className="service-data">
+                      <a href="/web" className="service-data">
                         <div className="service-img">
                           <img src={service4} alt="Graphic Design" />
                         </div>
@@ -118,12 +121,12 @@ const ServicePage = () => {
                             <BiRightArrow className="arrow" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div className="service-col">
                     <div className="service">
-                      <Link to="/crm" className="service-data">
+                      <a href="/crm" className="service-data">
                         <div className="service-img">
                           <img src={service1} alt="Marketing" />
                         </div>
@@ -133,7 +136,7 @@ const ServicePage = () => {
                           </div>
                           <p className="disc">
                             Customer retention is every company’s dream. We
-                            provide CRM system to stay connected with customers,
+                            provide CRM system href stay connected with customers,
                             streamline processes, & improve profitability.
                           </p>
                           <div class="service-btn">
@@ -141,12 +144,12 @@ const ServicePage = () => {
                             <BiRightArrow className="arrow" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div className="service-col">
                     <div className="service">
-                      <Link to="/data" className="service-data">
+                      <a href="/data" className="service-data">
                         <div className="service-img">
                           <img src={service6} alt="Mobile Apps" />
                         </div>
@@ -164,12 +167,12 @@ const ServicePage = () => {
                             <BiRightArrow className="arrow" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div className="service-col">
                     <div className="service">
-                      <Link to="/bpm" className="service-data">
+                      <a href="/bpm" className="service-data">
                         <div className="service-img">
                           <img src={service5} alt="Social Media" />
                         </div>
@@ -178,7 +181,7 @@ const ServicePage = () => {
                             <h3>Business Process Management</h3>
                           </div>
                           <p className="disc">
-                            Our experienced team suggests various methods to
+                            Our experienced team suggests various methods href
                             discover, analyze, measure, model, improve,
                             optimize, and automate business processes.
                           </p>
@@ -187,12 +190,12 @@ const ServicePage = () => {
                             <BiRightArrow className="arrow" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div className="service-col">
                     <div className="service">
-                      <Link to="/mobile" className="service-data">
+                      <a href="/mobile" className="service-data">
                         <div className="service-img">
                           <img src={service3} alt="E-Commerce Solution" />
                         </div>
@@ -210,7 +213,7 @@ const ServicePage = () => {
                             <BiRightArrow className="arrow" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -220,7 +223,7 @@ const ServicePage = () => {
           <div className="scroll-down">
             <div className="scroll-down-arrow">
               {/* <div className="scroll-down-text">Scroll Down</div> */}
-              <Link to="#about" onClick={(e) => smoothScrollup(e, "#small-banner")}>
+              <a href="#about" onClick={(e) => smoothScrollup(e, "#small-banner")}>
                 <div className="scroll-down-img-container">
                   <img
                     className="scroll-down-img"
@@ -228,7 +231,7 @@ const ServicePage = () => {
                     alt="scroll down"
                   />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
